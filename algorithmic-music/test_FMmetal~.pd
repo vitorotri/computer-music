@@ -1,0 +1,52 @@
+#N canvas 685 47 679 700 10;
+#X floatatom 51 176 5 0 0 2 fundamental - -;
+#X obj 128 74 vsl 15 128 0 3 0 0 empty empty detune 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 248 186 ADSRlinear~;
+#X obj 112 290 output~;
+#X obj 258 31 vsl 15 128 0 1 0 0 empty empty Ap 0 -9 0 10 -262144 -1
+-1 12700 1;
+#X obj 205 141 bng 15 250 50 0 empty empty start 17 7 0 10 -4034 -1
+-1;
+#X floatatom 335 133 5 0 0 2 A - -;
+#X floatatom 374 133 5 0 0 2 D - -;
+#X floatatom 415 133 5 0 0 2 S - -;
+#X floatatom 456 133 5 0 0 2 R - -;
+#X obj 285 29 vsl 15 128 0 1 0 0 empty empty As 0 -9 0 10 -262144 -1
+-1 8890 1;
+#X obj 113 225 FMmetal~;
+#X msg 354 -34 100;
+#X msg 395 -33 100;
+#X msg 434 -32 300;
+#X msg 475 -32 100;
+#X msg 270 -34 1;
+#X msg 311 -34 0.7;
+#X msg 224 -34 130;
+#X obj 285 -74 bng 15 250 50 0 empty empty setar_valores_exemplo 17
+7 0 10 -262144 -1 -1;
+#X connect 0 0 11 0;
+#X connect 1 0 11 1;
+#X connect 2 0 11 2;
+#X connect 4 0 2 1;
+#X connect 5 0 2 0;
+#X connect 6 0 2 2;
+#X connect 7 0 2 4;
+#X connect 8 0 2 5;
+#X connect 9 0 2 6;
+#X connect 10 0 2 3;
+#X connect 11 0 3 1;
+#X connect 11 0 3 0;
+#X connect 12 0 6 0;
+#X connect 13 0 7 0;
+#X connect 14 0 8 0;
+#X connect 15 0 9 0;
+#X connect 16 0 4 0;
+#X connect 17 0 10 0;
+#X connect 18 0 0 0;
+#X connect 19 0 18 0;
+#X connect 19 0 16 0;
+#X connect 19 0 17 0;
+#X connect 19 0 12 0;
+#X connect 19 0 13 0;
+#X connect 19 0 14 0;
+#X connect 19 0 15 0;

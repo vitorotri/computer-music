@@ -1,0 +1,27 @@
+#N canvas 685 47 679 700 10;
+#X floatatom 113 183 5 0 0 2 moduladora - -;
+#X obj 112 290 output~;
+#X obj 210 153 bng 15 250 50 0 empty empty start 17 7 0 10 -4034 -1
+-1;
+#X floatatom 336 145 5 0 0 1 beta - -;
+#X obj 113 225 FMblocodemadeira~;
+#X obj 248 186 Rexponencial~;
+#X floatatom 285 145 5 0 0 2 duração - -;
+#X msg 250 97 25;
+#X msg 311 97 2;
+#X obj 250 65 bng 15 250 50 0 empty empty setar_valores_exemplo 17
+7 0 10 -262144 -1 -1;
+#X msg 191 97 150;
+#X connect 0 0 4 0;
+#X connect 2 0 5 0;
+#X connect 3 0 5 2;
+#X connect 4 0 1 1;
+#X connect 4 0 1 0;
+#X connect 5 0 4 1;
+#X connect 6 0 5 1;
+#X connect 7 0 6 0;
+#X connect 8 0 3 0;
+#X connect 9 0 8 0;
+#X connect 9 0 7 0;
+#X connect 9 0 10 0;
+#X connect 10 0 0 0;

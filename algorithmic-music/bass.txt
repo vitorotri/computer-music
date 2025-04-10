@@ -1,0 +1,14 @@
+0 bass 55;
+300 bass 55;
+300 bass 48;
+480 bass 55;
+480 bass 48;
+300 bass 55;
+300 bass 65;
+300 bass 55;
+480 bass 55;
+480 bass 48;
+300 bass 42;
+300 bass 48;
+300 bass 55;
+300 bass 55;

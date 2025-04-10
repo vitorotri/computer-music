@@ -1,0 +1,27 @@
+#N canvas 685 47 679 700 10;
+#X floatatom 113 183 5 0 0 2 portadora - -;
+#X obj 112 290 output~;
+#X obj 224 157 bng 15 250 50 0 empty empty start 17 7 0 10 -4034 -1
+-1;
+#X obj 113 225 FMsino~;
+#X obj 248 186 Rexponencial~;
+#X floatatom 285 157 5 0 0 2 duração - -;
+#X floatatom 338 158 5 0 0 2 beta - -;
+#X msg 245 89 7000;
+#X obj 245 37 bng 15 250 50 0 empty empty setar_valores_exemplo 17
+7 0 10 -262144 -1 -1;
+#X msg 209 89 300;
+#X msg 291 89 5;
+#X connect 0 0 3 0;
+#X connect 2 0 4 0;
+#X connect 3 0 1 1;
+#X connect 3 0 1 0;
+#X connect 4 0 3 1;
+#X connect 5 0 4 1;
+#X connect 6 0 4 2;
+#X connect 7 0 5 0;
+#X connect 8 0 9 0;
+#X connect 8 0 7 0;
+#X connect 8 0 10 0;
+#X connect 9 0 0 0;
+#X connect 10 0 6 0;

@@ -1,0 +1,44 @@
+#N canvas 685 47 679 700 10;
+#X floatatom 117 329 5 0 0 2 portadora - -;
+#X obj 116 436 output~;
+#X obj 214 299 bng 15 250 50 0 empty empty start 17 7 0 10 -4034 -1
+-1;
+#X obj 117 371 FMtambor~;
+#X obj 252 332 ARtambor~;
+#X obj 262 186 vsl 15 128 0 1 0 0 empty empty Ai 0 -9 0 10 -262144
+-1 -1 7620 1;
+#X obj 282 186 vsl 15 128 0 1 0 0 empty empty Ap 0 -9 0 10 -262144
+-1 -1 12700 1;
+#X floatatom 317 285 5 0 0 2 A - -;
+#X floatatom 356 286 5 0 0 2 R - -;
+#X floatatom 355 316 5 0 0 1 beta - -;
+#X msg 303 139 40;
+#X msg 341 140 160;
+#X msg 266 140 1;
+#X msg 225 142 0.6;
+#X obj 283 93 bng 15 250 50 0 empty empty setar_valores_exemplo 17
+7 0 10 -262144 -1 -1;
+#X msg 182 142 150;
+#X msg 380 141 3;
+#X connect 0 0 3 0;
+#X connect 2 0 4 0;
+#X connect 3 0 1 1;
+#X connect 3 0 1 0;
+#X connect 4 0 3 1;
+#X connect 5 0 4 1;
+#X connect 6 0 4 2;
+#X connect 7 0 4 3;
+#X connect 8 0 4 4;
+#X connect 9 0 4 5;
+#X connect 10 0 7 0;
+#X connect 11 0 8 0;
+#X connect 12 0 6 0;
+#X connect 13 0 5 0;
+#X connect 14 0 13 0;
+#X connect 14 0 12 0;
+#X connect 14 0 10 0;
+#X connect 14 0 11 0;
+#X connect 14 0 16 0;
+#X connect 14 0 15 0;
+#X connect 15 0 0 0;
+#X connect 16 0 9 0;

@@ -1,0 +1,14 @@
+0 drum 80;
+150 drum 80;
+150 drum 80;
+150 drum 80;
+150 drum 80;
+480 drum 80;
+480 drum 80;
+300 drum 80;
+300 drum 80;
+300 drum 80;
+480 drum 80;
+480 drum 80;
+300 drum 80;
+300 drum 80;

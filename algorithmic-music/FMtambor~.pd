@@ -1,0 +1,90 @@
+#N canvas 665 61 679 700 10;
+#X obj 126 394 *~;
+#X floatatom 127 179 5 0 0 0 - - -;
+#X obj 127 354 osc~;
+#X obj 87 427 +~;
+#X obj 393 218 +~;
+#X floatatom 87 397 5 0 0 0 - - -;
+#X obj 87 452 osc~;
+#X obj 422 145 expr~ 1 - $v1;
+#X obj 350 154 *~;
+#X obj 87 1 inlet;
+#X obj 423 194 *~;
+#X floatatom 87 35 5 0 0 1 portadora - -;
+#X obj 88 475 +~;
+#X obj 178 540 outlet~;
+#X obj 178 516 *~;
+#X obj 350 3 inlet~;
+#N canvas 0 0 450 300 (subpatch) 0;
+#X array array1 100 float 1;
+#A 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0;
+#X coords 0 1 99 -1 200 140 1;
+#X restore 402 434 graph;
+#X msg 466 168 0;
+#X obj 412 268 /~;
+#X obj 204 364 *~;
+#X obj 87 60 t f b;
+#X obj 422 345 print;
+#X obj 462 313 snapshot~;
+#X obj 502 240 metro;
+#X floatatom 529 216 5 0 0 0 - - -;
+#X obj 502 215 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 462 374 tabwrite array1;
+#X obj 502 266 t b b;
+#X obj 462 344 abs;
+#X obj 127 135 * 1.41;
+#X msg 365 123 2;
+#X text 40 582 A ordem das entradas no superpatch são \, da esquerda
+para a direita: frequência da portadora e amplitude. Para se simular
+um tambor \, aconselha-se usar um envelope AR exponencial (ARtambor~)
+\, com ataque A=40 \, relaxamento R=160 \, amplitude inicial 0<Ai<1
+\, amplitude de pico Ai=1 \, e beta positivo.;
+#X obj 627 304 + 1;
+#X obj 573 304 int 1;
+#X obj 573 337 % 100;
+#X text 626 334 Counter up to 100;
+#X connect 0 0 3 1;
+#X connect 1 0 19 1;
+#X connect 1 0 2 0;
+#X connect 2 0 0 0;
+#X connect 3 0 6 0;
+#X connect 4 0 18 0;
+#X connect 4 0 19 0;
+#X connect 5 0 3 0;
+#X connect 6 0 12 0;
+#X connect 7 0 10 0;
+#X connect 8 0 4 0;
+#X connect 9 0 11 0;
+#X connect 10 0 4 1;
+#X connect 11 0 20 0;
+#X connect 12 0 14 0;
+#X connect 14 0 13 0;
+#X connect 15 0 7 0;
+#X connect 15 0 8 0;
+#X connect 15 0 14 1;
+#X connect 17 0 10 1;
+#X connect 18 0 22 0;
+#X connect 19 0 0 1;
+#X connect 20 0 29 0;
+#X connect 20 0 5 0;
+#X connect 20 1 17 0;
+#X connect 20 1 30 0;
+#X connect 22 0 21 0;
+#X connect 22 0 28 0;
+#X connect 23 0 27 0;
+#X connect 24 0 23 1;
+#X connect 25 0 23 0;
+#X connect 27 0 22 0;
+#X connect 27 1 33 0;
+#X connect 28 0 26 0;
+#X connect 29 0 1 0;
+#X connect 30 0 8 1;
+#X connect 30 0 18 1;
+#X connect 32 0 33 1;
+#X connect 33 0 32 0;
+#X connect 33 0 34 0;
+#X connect 34 0 26 1;

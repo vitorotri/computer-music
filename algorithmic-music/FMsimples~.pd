@@ -1,0 +1,27 @@
+#N canvas 2 47 1362 700 10;
+#X obj 110 158 +~;
+#X obj 168 84 osc~;
+#X obj 168 118 *~;
+#X obj 109 191 osc~;
+#X obj 109 226 *~;
+#X obj 19 28 inlet~ carrier freq;
+#X obj 256 28 inlet~ freq deviation;
+#X obj 143 28 inlet~ modul freq;
+#X obj 392 28 inlet~ amplitude;
+#X obj 110 262 outlet~;
+#X text 76 7 1;
+#X text 194 8 2;
+#X text 316 9 3;
+#X text 439 9 4;
+#X text 35 343 A ordem das entradas no superpatch da esquerda para
+a direita são: frequência portadora \, frequência moduladora \,
+desvio de pico e amplitude.;
+#X connect 0 0 3 0;
+#X connect 1 0 2 0;
+#X connect 2 0 0 1;
+#X connect 3 0 4 0;
+#X connect 4 0 9 0;
+#X connect 5 0 0 0;
+#X connect 6 0 2 1;
+#X connect 7 0 1 0;
+#X connect 8 0 4 1;
