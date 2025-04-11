@@ -14,7 +14,13 @@ $$P_z = 2 L_z \lceil k / 2 \rceil + (-1)^{|j|} S_k.$$
 
 The path taken by a single ray from the source until the receiver at position $(O_x, O_y, O_z)$ will be of length $d = |(P_x, P_y, P_z) - (O_x, O_y, O_z)|$, crossing a total of $|i| + |j| + |k|$ walls. The ray's amplitude is also attenuated according to the distance. Consequently, the amplitude of a ray at the receiver is
 
-$$A = \dfrac{(1 - \alpha)^{|i| + |j| + |j|}}{d}$$.
+$$A = \dfrac{(1 - \alpha)^{|i| + |j| + |j|}}{d},$$
+
+where $\alpha$ is the room's average absorption coefficient on a single frequency band. Because the speed of sound $c$ is constant, this ray arrives at the receiver at instant $t = d/c$, in seconds. All that is needed is to sum the contribution of each ray arriving at the same instant on a receiver.
+
+The number of virtual rooms / rays will be defined by the desired order of reflection $N$, and it will bound them with the relation
+
+$|i| + |j| + |k| \leqslant N.$ 
 
 ## Requirements and Installation
 
