@@ -2,7 +2,7 @@
 
 # Kalimba Patch in Pd
 
-Pure Data patch that simulate a 11-key kalimba in the Shiraz and Pygmy scale, using sound synthesis techniques.
+Pure Data patch that simulates a 11-key kalimba in the Shiraz and Pygmy scale, using sound synthesis techniques.
 
 # Requirements
 
@@ -18,6 +18,6 @@ After turning DSP on, play it with keys A, S, D, F, H, J, K, L, W, R and U. If d
 
 # References
 
-[1] F. Moore, Elements of Computer Music. Prentice Hall, 1990.
+[1] F. R. Moore, "Elements of Computer Music". Prentice Hall, 1990.
 
-[2] L. Kinsler, A. Frey, A. Coppens, and J. Sanders, Fundamentals of Acoustics. Wiley, 2000.
+[2] L. Kinsler, A. Frey, A. Coppens, and J. Sanders, "Fundamentals of Acoustics". Wiley, 2000.
