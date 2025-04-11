@@ -14,7 +14,7 @@ Only Pure Data is required, and on Linux it can be installed with:
 
 # Usage
 
-After turning DSP on, play it with keys A,S,D,F,H,J,K,L,W,R and U. If desired, the spectrum can be shown by clicking on the gray [bang].
+After turning DSP on, play it with keys A, S, D, F, H, J, K, L, W, R and U. If desired, the spectrum can be shown by clicking on the gray [bang].
 
 # References
 
