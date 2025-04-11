@@ -1,4 +1,4 @@
-#N canvas 138 122 1362 700 10;
+#N canvas 118 122 1362 700 10;
 #X obj 24 -8 key;
 #X floatatom 24 23 5 0 0 0 - - -;
 #X obj 64 39 sel 97;
@@ -46,16 +46,16 @@
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 #X coords 0 300 249 0 1000 200 1 0 0;
 #X restore -5 438 graph;
-#X obj 752 295 bng 15 250 50 0 empty empty empty 17 7 0 10 -99865 -1
+#X obj 773 330 bng 15 250 50 0 empty empty empty 17 7 0 10 -99865 -1
 -1;
-#X obj 752 271 metro;
-#X msg 712 219 stop;
-#X floatatom 779 243 5 0 0 0 - - -;
+#X obj 773 306 metro;
+#X msg 733 254 stop;
+#X floatatom 800 278 5 0 0 0 - - -;
 #X obj 733 367 fft;
-#X obj 752 134 bng 15 250 50 0 empty empty show_spectrum 17 7 0 10
+#X obj 773 169 bng 15 250 50 0 empty empty show_spectrum 17 7 0 10
 -99865 -1 -1;
-#X msg 779 214 30;
-#X obj 752 177 t b b;
+#X msg 800 249 30;
+#X obj 773 212 t b b;
 #X text 914 645 20K;
 #X text 447 645 10K;
 #X text 29 644 1k;
@@ -93,7 +93,7 @@
 #X msg 519 261 74;
 #X msg 569 262 91.5;
 #X obj 64 101 hradio 15 1 0 2 empty empty empty 0 -8 0 10 -191407 -1
--1 1;
+-1 0;
 #X msg 606 202 80;
 #X msg 552 201 63;
 #X msg 500 201 60;
@@ -108,34 +108,34 @@
 #X obj 64 128 sel 0;
 #X text -87 57 0 Shiraz 1 Pygmy;
 #X obj 110 101 hradio 15 1 0 2 empty empty empty 0 -8 0 10 -191407
--1 -1 1;
+-1 -1 0;
 #X obj 110 129 sel 0;
 #X obj 163 102 hradio 15 1 0 2 empty empty empty 0 -8 0 10 -191407
--1 -1 1;
+-1 -1 0;
 #X obj 163 128 sel 0;
 #X obj 212 101 hradio 15 1 0 2 empty empty empty 0 -8 0 10 -191407
--1 -1 1;
+-1 -1 0;
 #X obj 212 128 sel 0;
 #X obj 267 102 hradio 15 1 0 2 empty empty empty 0 -8 0 10 -191407
--1 -1 1;
+-1 -1 0;
 #X obj 267 129 sel 0;
 #X obj 317 102 hradio 15 1 0 2 empty empty empty 0 -8 0 10 -191407
--1 -1 1;
+-1 -1 0;
 #X obj 317 129 sel 0;
 #X obj 366 102 hradio 15 1 0 2 empty empty empty 0 -8 0 10 -191407
--1 -1 1;
+-1 -1 0;
 #X obj 366 129 sel 0;
 #X obj 420 101 hradio 15 1 0 2 empty empty empty 0 -8 0 10 -191407
--1 -1 1;
+-1 -1 0;
 #X obj 420 128 sel 0;
 #X obj 473 101 hradio 15 1 0 2 empty empty empty 0 -8 0 10 -191407
--1 -1 1;
+-1 -1 0;
 #X obj 473 128 sel 0;
 #X obj 527 101 hradio 15 1 0 2 empty empty empty 0 -8 0 10 -191407
--1 -1 1;
+-1 -1 0;
 #X obj 527 128 sel 0;
 #X obj 576 101 hradio 15 1 0 2 empty empty empty 0 -8 0 10 -191407
--1 -1 1;
+-1 -1 0;
 #X obj 576 128 sel 0;
 #X msg -44 84 0;
 #X msg 4 84 1;
