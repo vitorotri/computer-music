@@ -8,9 +8,9 @@ Given a shoebox-shaped room with dimensions $L_x$, $L_y$ and $L_z$, in meters, t
 
 For a source at position $(P_x, P_y, P_z) = (S_x, S_y, S_z)$ in room $(0,0,0)$, on the x-axis, the first image source $(i = 1)$ will be at $2 L_x - S_x$, the second one $(i = 2)$ at $2 L_x + S_x$, the third one $(i = 3)$ at $4 L_x - S_x$ and so on. On the opposite direction, for $(i = -1)$, $P_x = -S_x$ and for $(i = -2)$, $P_x = -2 L_x + S_x$. The reasonaning is the same for the other axes. Then, it can be seen that the image sources can be computed with:
 
-$$P_x = 2 L_x \ceil{i / 2} + (-1)^{|i|} S_x$$
-$$P_y = 2 L_y \ceil{j / 2} + (-1)^{|j|} S_y$$
-$$P_z = 2 L_z \ceil{k / 2} + (-1)^{|j|} S_k$$
+$$P_x = 2 L_x \lceil i / 2 \rceil + (-1)^{|i|} S_x$$
+$$P_y = 2 L_y \lceil j / 2 \rceil + (-1)^{|j|} S_y$$
+$$P_z = 2 L_z \lceil k / 2 \rceil + (-1)^{|j|} S_k$$
 
 ## Requirements and Installation
 
