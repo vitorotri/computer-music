@@ -1,3 +1,5 @@
+![My Image](img.png)
+
 # Acoustical Impulse Response Evaluation with Image Sources Method
 
 Pure Data patch for convolution reverb on shoebox-shaped rooms. The resulting RIR (Room Impulse Response) is normalized from -1 to 1, and this simplified model will consider an average sound absorption coefficient for the room on a single frequency band.
@@ -60,7 +62,7 @@ fN
 m
 </pre>
 
-The patch will compute the RIR for the left and right ears, convolving it with the desired anechoic signal and allowing the user to play the input and output wav files.
+In the present example, the dimensions of a large and reverberant cathedral is considered, with the listener far from the source. The patch will compute the RIR for the left and right ears, convolving it with the desired anechoic signal and allowing the user to play the input and the binaural output wav.
 
 ## License
 
