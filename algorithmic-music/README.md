@@ -4,7 +4,7 @@
 
 Pure Data patch that algorithmically plays a sample music from the Metal Gear (R) game series, called "Level 1 Warning".
 
-# Requirements
+## Requirements
 
 Only Pure Data is required, and on Linux it can be installed with:
 
@@ -12,15 +12,15 @@ Only Pure Data is required, and on Linux it can be installed with:
 	apt-get install puredata
 ```
 
-# Usage
+## Usage
 
 The file MAIN.pd contains the main patch. Click on the green bang to start / stop the song. Do not delete any patch nor text files inside the directory, as they are all used to do the synthesis of the instruments and play them with the correct frequencies at correct times.
 
-# License
+## License
 
 Please read the LICENSE file for rights and limitations.
 
-# References
+## References
 
 [1] F. R. Moore, "Elements of Computer Music". Prentice Hall, 1990.
 
