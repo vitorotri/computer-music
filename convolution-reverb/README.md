@@ -1,6 +1,6 @@
-# Image Sources Compute
+# Acoustical Impulse Response Evaluation with Image Sources Method
 
-Pure Data patch for convolution reverb on shoebox rooms.
+Pure Data patch for convolution reverb on shoebox rooms. The resulting RIR (Room Impulse Response) is normalized from -1 to 1, and the this simplified model will consider an average sound absorption coefficient for the room on a single frequency band.
 
 ## The Image Sources Method
 
@@ -12,9 +12,13 @@ $$P_x = 2 L_x \lceil i / 2 \rceil + (-1)^{|i|} S_x,$$
 $$P_y = 2 L_y \lceil j / 2 \rceil + (-1)^{|j|} S_y,$$
 $$P_z = 2 L_z \lceil k / 2 \rceil + (-1)^{|j|} S_k.$$
 
+The path taken by a single ray from the source until the receiver at position $(O_x, O_y, O_z)$ will be of length $d = |(P_x, P_y, P_z) - (O_x, O_y, O_z)|$, crossing a total of $|i| + |j| + |k|$ walls. The ray's amplitude is also attenuated according to the distance. Consequently, the amplitude of a ray at the receiver is
+
+$$A = \dfrac{(1 - \alpha)^{|i| + |j| + |j|}}{d}$$.
+
 ## Requirements and Installation
 
-The external that computes the RIR (Room Impulse Response) using Image Sources is in Lua, and it binds with Pd through pd-lua. It alsos uses python and scipy for doing the fft convolution. On Linux, install the requirements with:
+The external that computes the RIR using Image Sources is in Lua, and it binds with Pd through pd-lua. It alsos uses python and scipy for doing the fft convolution. On Linux, install the requirements with:
 
 	apt-get install puredata pd-lua lua5.2 python3 python3-pip
 	
@@ -34,10 +38,16 @@ Place a copy the imgsources.lua file at Pd/externals or the choose the proper pa
 
 ## Usage
 
-The MAIN.pd file has the main patch.
+The MAIN.pd file has the main patch. Follow the instructions inside the patch to read an audio file and do the convolution using the scene.txt file. The scene.txt file is...
+
+## License
+
+Please, read the LICENSE file for rights and limitations.
 
 ## References
 
-...
+[1] Allen & Berkeley
+
+[2] Queiroz
 
 
