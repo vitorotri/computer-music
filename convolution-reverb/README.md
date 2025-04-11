@@ -24,7 +24,7 @@ $$|i| + |j| + |k| \leqslant N.$$
 
 To add the absorption of air with index $m$, the amplitude is adapted with
 
-$A *= exp(-md).$
+$$A \times = \exp(-md).$$
 
 ## Requirements and Installation
 
