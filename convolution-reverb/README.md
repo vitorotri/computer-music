@@ -42,7 +42,7 @@ If necessary, instead of ALSA / Pulseaudio, use the JACK (Jack Audio Connection 
 
 	apt-get install jackd2
 	
-Run the jack server on a terminal before running Pure Data.
+Run the jack server on a terminal before running Pure Data, then choose it in the 'Media' option of Pd.
 
 Lastly, inside Pd, go to Help -> Find externals -> type in 'command' to install the [command] external (choose latest version), without the quotations, so it runs the python script from Pd.
 
