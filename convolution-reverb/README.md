@@ -48,8 +48,9 @@ Place a copy the imgsources.lua file at Pd/externals or the choose the proper pa
 
 ## Usage
 
-The MAIN.pd file has the main patch. Follow the instructions inside the patch to read an audio file and do the convolution using the scene.txt file. It has the built-in option to read 2 anechoic audio files inside the same directory: alughing.wav and singing.wav. If desired, change the name to your wav file in the message box. The scene.txt file contains the configuration for the room in the following format:
+The MAIN.pd file has the main patch. Follow the instructions inside the patch to read an audio file and do the convolution using the scene.txt file. It has the built-in option to read 2 anechoic audio files inside the same directory: laughing.wav and singing.wav. If desired, change the name to your wav file in the message box. The scene.txt file contains the configuration for the room in the following format:
 
+```txt
 Lx Ly Lz\
 Ox_left Oy_left Oz_left\
 Ox_right Oy_right Oz_right\
@@ -57,6 +58,7 @@ Sx Sy Sz\
 c, N, alpha\
 fN\
 m
+```
 
 The patch will compute the RIR for the left and right ears, convolving it with the desired anechoic signal and allowing the user to play the input and output wav files.
 
