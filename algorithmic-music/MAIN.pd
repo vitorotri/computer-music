@@ -1,4 +1,4 @@
-#N canvas 726 210 679 700 10;
+#N canvas 706 210 679 700 10;
 #X obj 166 -58 bng 30 250 50 0 empty empty empty 17 7 0 10 -4034 -1
 -1;
 #X obj 166 0 t b b;
@@ -7,7 +7,7 @@
 #X text 82 476 https://www.youtube.com/watch?v=9mZfraudKHE;
 #X obj 211 279 *~;
 #X obj 278 259 hsl 80 20 0 1 0 0 empty empty Amplitude_control -2 -8
-0 10 -258113 -1 -1 5530 1;
+0 10 -258113 -1 -1 0 1;
 #X obj 159 279 *~;
 #X msg 242 241 0.7;
 #X obj 242 210 r s;
@@ -109,9 +109,9 @@
 #X obj 316 521 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X obj 355 460 vsl 17 80 0 1 0 0 empty empty Ap 0 -9 0 10 -262144 -1
--1 7900 1;
+-1 0 1;
 #X obj 376 460 vsl 17 80 0 1 0 0 empty empty As 0 -9 0 10 -262144 -1
--1 5530 1;
+-1 0 1;
 #X floatatom 410 528 5 0 0 2 A - -;
 #X floatatom 446 528 5 0 0 2 D - -;
 #X floatatom 482 528 5 0 0 2 S - -;
@@ -209,9 +209,9 @@
 #X obj 199 430 FMtambor~;
 #X obj 334 391 ARtambor~;
 #X obj 344 245 vsl 15 128 0 1 0 0 empty empty Ai 0 -9 0 10 -262144
--1 -1 7620 1;
+-1 -1 0 1;
 #X obj 364 245 vsl 15 128 0 1 0 0 empty empty Ap 0 -9 0 10 -262144
--1 -1 12700 1;
+-1 -1 0 1;
 #X floatatom 399 344 5 0 0 2 A - -;
 #X floatatom 438 345 5 0 0 2 R - -;
 #X floatatom 437 375 5 0 0 1 beta - -;
@@ -268,7 +268,7 @@
 #X msg 45 271 read wind.txt;
 #X floatatom 212 302 5 0 0 2 fundamental - -;
 #X obj 278 194 vsl 15 128 0 3 0 0 empty empty detune 0 -9 0 10 -262144
--1 -1 4233 1;
+-1 -1 0 1;
 #X obj 349 266 bng 15 250 50 0 empty empty start 17 7 0 10 -262144
 -1 -1;
 #X floatatom 432 269 5 0 0 2 A - -;
@@ -276,7 +276,7 @@
 #X floatatom 514 269 5 0 0 2 R - -;
 #X obj 379 297 ASR~;
 #X obj 401 149 vsl 15 128 0 1 0 0 empty empty As 0 -9 0 10 -262144
--1 -1 12700 1;
+-1 -1 0 1;
 #X floatatom 557 281 5 0 0 1 beta - -;
 #X obj 244 336 FMclarinete~;
 #X msg 432 227 100;
@@ -332,9 +332,9 @@
 #X obj 294 -84 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X obj 354 -141 vsl 17 80 0 1 0 0 empty empty Ap 0 -9 0 10 -262144
--1 -1 4740 1;
+-1 -1 0 1;
 #X obj 375 -141 vsl 17 80 0 1 0 0 empty empty As 0 -9 0 10 -262144
--1 -1 3950 1;
+-1 -1 0 1;
 #X floatatom 409 -73 5 0 0 2 A - -;
 #X floatatom 445 -73 5 0 0 2 D - -;
 #X floatatom 481 -73 5 0 0 2 S - -;

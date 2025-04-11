@@ -4,7 +4,7 @@
 --#                                                                  #--
 --####################################################################--
 
-
+-- source position
 function p(L,f,n)
   local pos
   pos = 2*L*math.floor((n+1)/2) + f*((-1)^n)
@@ -20,8 +20,9 @@ function zeros(dim)
   return array
 end
 
-
-function evaluate(X,Y,Z,oex,oey,oez,odx,ody,odz,fx,fy,fz,v,N,am,fs)
+-- Variable names are slightly changed
+-- 'e' and 'd' are the Portuguese initials for left and right
+function evaluate(X,Y,Z,oex,oey,oez,odx,ody,odz,fx,fy,fz,v,N,am,fs,m)
   local pxm = 2*X*math.floor((N+1)/2) + fx -- max x virtual source
   local pym = 2*Y*math.floor((N+1)/2) + fy -- max y virtual source
   local pzm = 2*Z*math.floor((N+1)/2) + fz -- max z virtual source
@@ -54,6 +55,9 @@ function evaluate(X,Y,Z,oex,oey,oez,odx,ody,odz,fx,fy,fz,v,N,am,fs)
       
           te = math.ceil(fs*ce/v) -- left ear path
           td = math.ceil(fs*cd/v) -- right ear path
+          
+          ae = ae*math.exp(-m*ce) -- left ear air absorption effect
+          ad = ae*math.exp(-m*cd) -- right ear air absorption effect
       
           Ae[te] = Ae[te] + ae -- left ear impulse response (IR)
           Ad[td] = Ad[td] + ad -- right ear impulse response (IR)
@@ -94,12 +98,13 @@ function imgsources:in_1_list(l)
   self.fx, self.fy, self.fz = l[10], l[11], l[12] -- source position (m)
   self.v, self.N, self.am = l[13], l[14], l[15] -- speed of sound (m/s), order of reflection, average absorption
   self.fs = l[16] -- sampling frequency (Hz)
+  self.m = l[17] -- air absorption index
 end
 
 
 function imgsources:in_1_bang()
   pd.post("\n[OK] Started...\n")
-  self.Ae, self.Ad = evaluate(self.X,self.Y,self.Z,self.oex,self.oey,self.oez,self.odx,self.ody,self.odz,self.fx,self.fy,self.fz,self.v,self.N,self.am,self.fs)
+  self.Ae, self.Ad = evaluate(self.X,self.Y,self.Z,self.oex,self.oey,self.oez,self.odx,self.ody,self.odz,self.fx,self.fy,self.fz,self.v,self.N,self.am,self.fs,self.m)
   self:outlet(3,"float",{#self.Ae})
   self:outlet(4,"float",{#self.Ad})
   for j = 1, #self.Ae do

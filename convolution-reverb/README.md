@@ -1,6 +1,6 @@
 # Acoustical Impulse Response Evaluation with Image Sources Method
 
-Pure Data patch for convolution reverb on shoebox rooms. The resulting RIR (Room Impulse Response) is normalized from -1 to 1, and the this simplified model will consider an average sound absorption coefficient for the room on a single frequency band.
+Pure Data patch for convolution reverb on shoebox rooms. The resulting RIR (Room Impulse Response) is normalized from -1 to 1, and this simplified model will consider an average sound absorption coefficient for the room on a single frequency band.
 
 ## The Image Sources Method
 
@@ -16,11 +16,15 @@ The path taken by a single ray from the source until the receiver at position $(
 
 $$A = \dfrac{(1 - \alpha)^{|i| + |j| + |j|}}{d},$$
 
-where $\alpha$ is the room's average absorption coefficient on a single frequency band. Because the speed of sound $c$ is constant, this ray arrives at the receiver at instant $t = d/c$, in seconds. All that is needed is to sum the contribution of each ray arriving at the same instant on a receiver.
+where $\alpha$ is the room's average absorption coefficient on a single frequency band. Because the speed of sound $c$ is constant, this ray arrives at the receiver at instant $t = d/c$, in seconds. All that is left is to sum the contribution of each ray arriving at the same instant on a receiver.
 
 The number of virtual rooms / rays will be defined by the desired order of reflection $N$, and it will bound them with the relation
 
-$|i| + |j| + |k| \leqslant N.$ 
+$$|i| + |j| + |k| \leqslant N.$$
+
+To add the absorption of air with index $m$, the amplitude is adapted with
+
+$A *= exp(-md).$
 
 ## Requirements and Installation
 
@@ -45,6 +49,7 @@ Place a copy the imgsources.lua file at Pd/externals or the choose the proper pa
 ## Usage
 
 The MAIN.pd file has the main patch. Follow the instructions inside the patch to read an audio file and do the convolution using the scene.txt file. The scene.txt file is...
+It will compute the RIR for the left and right ears, convolving it and ...
 
 ## License
 
